@@ -62,33 +62,33 @@ About 85-90% of vaccine adverse event reports concern relatively minor events, s
  3 | CAGE_YR | 510323 | float64 | Calculated age of patient in years | Needs summation | integer |
  4 | CAGE_MO | 936 | float64 | Calculated age of patient in months | Needs summation | integer |
  5 | SEX | 591241 | object | Sex | | (M, F, Unknown=Blank) |
- 6 | RPT_DATE | 315 | **Datetime** | Date Form Completed | **REJECTED** | date |
+ 6 | RPT_DATE | 315 | **Datetime** | Date Form Completed | **REJECTED**, low number records | date |
  7 | SYMPTOM_TEXT | 591181 | object | Reported symptom text | **In Review** | text |
- 8 | DIED | 9434 | object | Died | **Patient Outcomes** | (Y, Blank) |
- 9 | DATEDIED | 8835| **Datetime** | Date of Death | **Patient Outcomes** | date |
- 10 | L_THREAT | 16254| object | Life-Threatening Illness | **Patient Outcomes**, *Medical history* | (Y, Blank) |
- 11 | ER_VISIT | 50 | object | Emergency Room or Doctor Visit| **Patient Outcomes** | (Y, Blank) |
- 12 | HOSPITAL | 53726 | object | Hospitalized | **Patient Outcomes** | (Y, Blank) |
- 13 | HOSPDAYS | 39773 | float64 | Number of days Hospitalized | **Patient Outcomes** | integer |
- 14 | X_STAY |  418 | object | Prolongation of Existing Hospitalization | **Patient Outcomes** | (Y, Blank) |
- 15 | DISABLE | 13438 |  object | Disability | **Patient Outcomes**, *Medical history* | (Y, Blank) |
+ 8 | DIED | 9434 | object | Died | Patient Outcomes | (Y, Blank) |
+ 9 | DATEDIED | 8835| **Datetime** | Date of Death | Patient Outcomes | date |
+ 10 | L_THREAT | 16254| object | Life-Threatening Illness | Patient Outcomes, *Medical history* | (Y, Blank) |
+ 11 | ER_VISIT | 50 | object | Emergency Room or Doctor Visit| Patient Outcomes | (Y, Blank) |
+ 12 | HOSPITAL | 53726 | object | Hospitalized | Patient Outcomes | (Y, Blank) |
+ 13 | HOSPDAYS | 39773 | float64 | Number of days Hospitalized | Patient Outcomes | integer |
+ 14 | X_STAY |  418 | object | Prolongation of Existing Hospitalization | Patient Outcomes | (Y, Blank) |
+ 15 | DISABLE | 13438 |  object | Disability | Patient Outcomes, *Medical history* | (Y, Blank) |
  16 | RECOVD | 541552 | object | Recovered |  | (Y=recovered, N=not recovered, U=Blank) |
- 17 | VAX_DATE | 564641 | object | Vaccination Date | Check here for vax dosage | date |
- 18 | ONSET_DATE | 570860 | object | Adverse Event Onset Date | *DOUBLE CHECK HERE* | date |
+ 17 | VAX_DATE | 564641 | **Datetime** | Vaccination Date | Check here for vax dosage | date |
+ 18 | ONSET_DATE | 570860 | **Datetime** | Adverse Event Onset Date | *DOUBLE CHECK HERE* | date |
  19 | NUMDAYS | 548731 | float64 | Number of days (Onset date - Vax. Date) | | integer |
  20 | LAB_DATA | 293299 | object | Diagnostic laboratory data | *Medical history* | | nominal | 
  21 | V_ADMINBY | 591241 | object | Type of facility where vaccine was administered | | **VAERS 1.0:** PUB=Public, PVT=Private, MIL=Military, OTH=Other, UNK=Unknown. **VAERS 2.0: ++** PHM=Pharmacy, SCH=school/student health clinic, SEN=Nursing home or senior living facility, WRK=Workplace clinic. |
  22 | V_FUNDBY | 365 | object | Type of funds used to purchase vaccines | **VAERS 1 field only** | PUB=Public, PVT=Private, MIL=Military; OTH=Other/Unknown |
  23 | OTHER_MEDS | 407792 | object | Other Medications | *Medical history* | nominal | 
  24 | CUR_ILL | 328851 | object | Illnesses at time of vaccination | *Medical history* | nominal | 
- 25 | HISTORY | 422557 | object | Chronic or long-standing health conditions | *Medical history*, **VAERS 1 form**, this field also includes pre-existing physician-diagnosed allergies | nominal |
+ 25 | HISTORY | 422557 | object | Chronic or long-standing health conditions | *Medical history*, **VAERS 1 form only**, this field also includes pre-existing physician-diagnosed allergies | nominal |
  26 | PRIOR_VAX | 36239 |  object | Prior Vaccination Event information | *Medical history* | nominal | 
- 27 | SPLTTYPE | 98610 |  object | Manufacturer/Immunization Project Report Number | **Rejected**, not on the scope | nominal | 
+ 27 | SPLTTYPE | 98610 |  object | Manufacturer/Immunization Project Report Number | **REJECTED**, not on the scope | nominal | 
  28 | FORM_VERS | 591241 | int64 | VAERS form version 1 or 2 | (1, 2) |
- 29 | TODAYS_DATE | 588302 | object | Date Form Completed | Not relevant **Rejected** | NOT INTO THE GUIDE! |
- 30 | BIRTH_DEFECT | 406 | object | Congenital anomaly or birth defect | **Patient Outcomes**, *Medical history*. **Only in VAERS2** | (Y, Blank) |
- 31 | OFC_VISIT | 136672 | object | Doctor or other healthcare provider office/clinic visit | **Patient Outcomes**,***Only in VAERS2*** | (Y, Blank) |
- 32 | ER_ED_VISIT | 103144 | object | Emergency room/department or urgent care | **Patient Outcomes**,***Only in VAERS2*** | (Y, Blank) |
+ 29 | TODAYS_DATE | 588302 | **Datetime** | Date Form Completed | Not relevant **REJECTED** | date |
+ 30 | BIRTH_DEFECT | 406 | object | Congenital anomaly or birth defect | Patient Outcomes, *Medical history*. **Only in VAERS2** | (Y, Blank) |
+ 31 | OFC_VISIT | 136672 | object | Doctor or other healthcare provider office/clinic visit | Patient Outcomes,***Only in VAERS2*** | (Y, Blank) |
+ 32 | ER_ED_VISIT | 103144 | object | Emergency room/department or urgent care | Patient Outcomes,***Only in VAERS2*** | (Y, Blank) |
  33 | ALLERGIES |381752 | object | Allergies to medications, food, or other products |  | nominal | 
  34 | SYMPTOM1 | 591241 | object | Adverse Event MedDRA Term 1 |  | code | 
  35 | SYMPTOMVERSION1 | 591241 | float64 | MedDRA dictionary version number 1 | | code | 
@@ -101,12 +101,12 @@ About 85-90% of vaccine adverse event reports concern relatively minor events, s
  42 | SYMPTOM5 | 207749 | object | Adverse Event MedDRA Term 5 | | code | 
  43 | SYMPTOMVERSION5 | 207749 | float64 |  MedDRA dictionary version number 5 | | code | 
  44 | VAX_TYPE | 591241 | object | Administered Vaccine Type | | (Many, only COVID19 interested) |
- 45 | VAX_MANU | 591241 | object | Vaccine Manufacturer | **Rejected** | (Many, only COVID19 interested) |
- 46 | VAX_LOT |  419626 | object | Manufacturer's Vaccine Lot | **Rejected** | (Many, only COVID19 interested) |
+ 45 | VAX_MANU | 591241 | object | Vaccine Manufacturer | important | (Many, only COVID19 interested) |
+ 46 | VAX_LOT |  419626 | object | Manufacturer's Vaccine Lot | **REJECTED** | (Many, only COVID19 interested) |
  47 | VAX_DOSE_SERIES | 588217 | object | Number of doses administered | Not completely reliable, The VAERS 1 field VAX_DOSE was discontinued in the VAERS 2 | (1 --if it was noted -- , Blank) | 
  48 | VAX_ROUTE |464076 | object | Vaccination Route | Could be important.. | (UN=Unknown, ID=Intradermal, IM=Intramuscular, SC=Subcutaneous, IN=Intranasal, PO=Per Oral, SYR=Needle and syringe (not specified further), JET=Needle free jet injector device,OT=Other)
  49 | VAX_SITE | 476756 | object | Vaccination \[Anatomic\] Site | | nominal |
- 50 | VAX_NAME | 591241 | object | Vaccination Name | If used this, reject Manufacturer | (Many, only COVID19 interested) | 
+ 50 | VAX_NAME | 591241 | object | Vaccination Name | **REJECTED** === VAX_MANU| (Many, only COVID19 interested) | 
 
 ---
 
