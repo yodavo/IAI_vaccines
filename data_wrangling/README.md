@@ -102,7 +102,7 @@ About 85-90% of vaccine adverse event reports concern relatively minor events, s
  43 | SYMPTOMVERSION5 | 207749 | float64 |  MedDRA dictionary version number 5 | | code | 
  44 | VAX_TYPE | 591241 | object | Administered Vaccine Type | | (Many, only COVID19 interested) |
  45 | VAX_MANU | 591241 | object | Vaccine Manufacturer | important | (Many, only COVID19 interested) |
- 46 | VAX_LOT |  419626 | object | Manufacturer's Vaccine Lot | **REJECTED** | (Many, only COVID19 interested) |
+46 | VAX_LOT |  419626 | object | Manufacturer's Vaccine Lot | double check | (Many, only COVID19 interested) |
  47 | VAX_DOSE_SERIES | 588217 | object | Number of doses administered | Not completely reliable, The VAERS 1 field VAX_DOSE was discontinued in the VAERS 2 | (1 --if it was noted -- , Blank) | 
  48 | VAX_ROUTE |464076 | object | Vaccination Route | Could be important.. | (UN=Unknown, ID=Intradermal, IM=Intramuscular, SC=Subcutaneous, IN=Intranasal, PO=Per Oral, SYR=Needle and syringe (not specified further), JET=Needle free jet injector device,OT=Other)
  49 | VAX_SITE | 476756 | object | Vaccination \[Anatomic\] Site | | nominal |
