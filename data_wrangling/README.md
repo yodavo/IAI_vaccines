@@ -70,18 +70,18 @@ About 85-90% of vaccine adverse event reports concern relatively minor events, s
 | :x:|  11 | ER_VISIT | 50 | object | Emergency Room or Doctor Visit| Patient Outcomes **VAERS 1 form only** | (Y, Blank) |
 |:heavy_check_mark: |  12 | HOSPITAL | 53726 | object | Hospitalized | Patient Outcomes | (Y, Blank) |
 |:heavy_check_mark: |  13 | HOSPDAYS | 39773 | float64 | Number of days Hospitalized | Patient Outcomes | integer |
-| |  14 | X_STAY |  418 | object | Prolongation of Existing Hospitalization | Patient Outcomes | (Y, Blank) |
-| |  15 | DISABLE | 13438 |  object | Disability | Patient Outcomes, *Medical history* | (Y, Blank) |
-| |  16 | RECOVD | 541552 | object | Recovered |  | (Y=recovered, N=not recovered, U=Blank) |
-| |  17 | VAX_DATE | 564641 | **Datetime** | Vaccination Date | Check here for vax dosage | date |
-| |  18 | ONSET_DATE | 570860 | **Datetime** | Adverse Event Onset Date | *DOUBLE CHECK HERE* | date |
+|:x: |  14 | X_STAY |  418 | object | Prolongation of Existing Hospitalization | Patient Outcomes | (Y, Blank) |
+|:heavy_check_mark:|  15 | DISABLE | 13438 |  object | Disability | Patient Outcomes, *Medical history* | (Y, Blank) |
+|:heavy_check_mark: |  16 | RECOVD | 541552 | object | Recovered |  | (Y=recovered, N=not recovered, U=Blank) |
+|:heavy_check_mark: |  17 | VAX_DATE | 564641 | **Datetime** | Vaccination Date | Check here for vax dosage | date |
+|:heavy_check_mark:|  18 | ONSET_DATE | 570860 | **Datetime** | Adverse Event Onset Date | *DOUBLE CHECK HERE* | date |
 | |  19 | NUMDAYS | 548731 | float64 | Number of days (Onset date - Vax. Date) | | integer |
 | |  20 | LAB_DATA | 293299 | object | Diagnostic laboratory data | *Medical history* | | nominal | 
 | |  21 | V_ADMINBY | 591241 | object | Type of facility where vaccine was administered | | **VAERS 1.0:** PUB=Public, PVT=Private, MIL=Military, OTH=Other, UNK=Unknown. **VAERS 2.0: ++** PHM=Pharmacy, SCH=school/student health clinic, SEN=Nursing home or senior living facility, WRK=Workplace clinic. |
 | :x:|  22 | V_FUNDBY | 365 | object | Type of funds used to purchase vaccines | **VAERS 1 field only** | PUB=Public, PVT=Private, MIL=Military; OTH=Other/Unknown |
 | |  23 | OTHER_MEDS | 407792 | object | Other Medications | *Medical history* | nominal | 
 | | 24 | CUR_ILL | 328851 | object | Illnesses at time of vaccination | *Medical history* | nominal | 
-| :heavy_check_mark:|  25 | HISTORY | 422557 | object | Chronic or long-standing health conditions | *Medical history*, **VAERS 1 form only**, this field also includes pre-existing physician-diagnosed allergies | nominal |
+| |  25 | HISTORY | 422557 | object | Chronic or long-standing health conditions | *Medical history*, **VAERS 1 form only**, this field also includes pre-existing physician-diagnosed allergies | nominal |
 | |  26 | PRIOR_VAX | 36239 |  object | Prior Vaccination Event information | *Medical history* | nominal | 
 | :x: |  27 | SPLTTYPE | 98610 |  object | Manufacturer/Immunization Project Report Number | **REJECTED**, not on the scope | nominal | 
 | :x: |  28 | FORM_VERS | 591241 | int64 | VAERS form version 1 or 2 | (1, 2) |
