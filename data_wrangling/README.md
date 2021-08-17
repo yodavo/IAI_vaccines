@@ -63,7 +63,7 @@ About 85-90% of vaccine adverse event reports concern relatively minor events, s
 | :x:|  4 | CAGE_MO | 936 | float64 | Calculated age of patient in months | Needs summation | integer |
 |:heavy_check_mark: |  5 | SEX | 591241 | object | Sex | | (M, F, Unknown=Blank) |
 | :x:|  6 | RPT_DATE | 315 | **Datetime** | Date Form Completed | **REJECTED**, low number records | date |
-| |  7 | SYMPTOM_TEXT | 591181 | object | Reported symptom text | **In Review** | text |
+| :robot: |  7 | SYMPTOM_TEXT | 591181 | object | Reported symptom text | **In Review** | text |
 |:heavy_check_mark: |  8 | DIED | 9434 | object | Died | Patient Outcomes | (Y, Blank) |
 |:heavy_check_mark: |  9 | DATEDIED | 8835| **Datetime** | Date of Death | Patient Outcomes | date |
 |:heavy_check_mark: |  10 | L_THREAT | 16254| object | Life-Threatening Illness | Patient Outcomes, *Medical history* | (Y, Blank) |
@@ -75,21 +75,21 @@ About 85-90% of vaccine adverse event reports concern relatively minor events, s
 |:heavy_check_mark: |  16 | RECOVD | 541552 | object | Recovered |  | (Y=recovered, N=not recovered, U=Blank) |
 |:heavy_check_mark: |  17 | VAX_DATE | 564641 | **Datetime** | Vaccination Date | Check here for vax dosage | date |
 |:heavy_check_mark:|  18 | ONSET_DATE | 570860 | **Datetime** | Adverse Event Onset Date | *DOUBLE CHECK HERE* | date |
-| |  19 | NUMDAYS | 548731 | float64 | Number of days (Onset date - Vax. Date) | | integer |
-| |  20 | LAB_DATA | 293299 | object | Diagnostic laboratory data | *Medical history* | | nominal | 
-| |  21 | V_ADMINBY | 591241 | object | Type of facility where vaccine was administered | | **VAERS 1.0:** PUB=Public, PVT=Private, MIL=Military, OTH=Other, UNK=Unknown. **VAERS 2.0: ++** PHM=Pharmacy, SCH=school/student health clinic, SEN=Nursing home or senior living facility, WRK=Workplace clinic. |
+|:x: |  19 | NUMDAYS | 548731 | float64 | Number of days (Onset date - Vax. Date) | | integer |
+| :robot: |  20 | LAB_DATA | 293299 | object | Diagnostic laboratory data | *Medical history* | | nominal | 
+|:heavy_check_mark: |  21 | V_ADMINBY | 591241 | object | Type of facility where vaccine was administered | | **VAERS 1.0:** PUB=Public, PVT=Private, MIL=Military, OTH=Other, UNK=Unknown. **VAERS 2.0: ++** PHM=Pharmacy, SCH=school/student health clinic, SEN=Nursing home or senior living facility, WRK=Workplace clinic. |
 | :x:|  22 | V_FUNDBY | 365 | object | Type of funds used to purchase vaccines | **VAERS 1 field only** | PUB=Public, PVT=Private, MIL=Military; OTH=Other/Unknown |
-| |  23 | OTHER_MEDS | 407792 | object | Other Medications | *Medical history* | nominal | 
-| | 24 | CUR_ILL | 328851 | object | Illnesses at time of vaccination | *Medical history* | nominal | 
-| |  25 | HISTORY | 422557 | object | Chronic or long-standing health conditions | *Medical history*, **VAERS 1 form only**, this field also includes pre-existing physician-diagnosed allergies | nominal |
-| |  26 | PRIOR_VAX | 36239 |  object | Prior Vaccination Event information | *Medical history* | nominal | 
+|:robot:  |  23 | OTHER_MEDS | 407792 | object | Other Medications | *Medical history* | nominal | 
+| :robot: | 24 | CUR_ILL | 328851 | object | Illnesses at time of vaccination | *Medical history* | nominal | 
+|:robot:  |  25 | HISTORY | 422557 | object | Chronic or long-standing health conditions | *Medical history*, **VAERS 1 form only**, this field also includes pre-existing physician-diagnosed allergies | nominal |
+|:robot:  |  26 | PRIOR_VAX | 36239 |  object | Prior Vaccination Event information | *Medical history* | nominal | 
 | :x: |  27 | SPLTTYPE | 98610 |  object | Manufacturer/Immunization Project Report Number | **REJECTED**, not on the scope | nominal | 
 | :x: |  28 | FORM_VERS | 591241 | int64 | VAERS form version 1 or 2 | (1, 2) |
 | :x: |  29 | TODAYS_DATE | 588302 | **Datetime** | Date Form Completed | Not relevant **REJECTED** | date |
 | :x: |  30 | BIRTH_DEFECT | 406 | object | Congenital anomaly or birth defect | Patient Outcomes, *Medical history*. **Only in VAERS2** | (Y, Blank) |
 | :x: | 31 | OFC_VISIT | 136672 | object | Doctor or other healthcare provider office/clinic visit | Patient Outcomes,***Only in VAERS2*** | (Y, Blank) |
 |:heavy_check_mark: |  32 | ER_ED_VISIT | 103144 | object | Emergency room/department or urgent care | Patient Outcomes,***Only in VAERS2*** | (Y, Blank) |
-| |  33 | ALLERGIES |381752 | object | Allergies to medications, food, or other products |  | nominal | 
+| :robot: |  33 | ALLERGIES |381752 | object | Allergies to medications, food, or other products |  | nominal | 
 | :x:|  34 | SYMPTOM1 | 591241 | object | Adverse Event MedDRA Term 1 |  | code | 
 | :x:|  35 | SYMPTOMVERSION1 | 591241 | float64 | MedDRA dictionary version number 1 | | code | 
 | :x:|  36 | SYMPTOM2 | 470315 | object | Adverse Event MedDRA Term 2 | | code | 
@@ -102,10 +102,10 @@ About 85-90% of vaccine adverse event reports concern relatively minor events, s
 | :x:| 43 | SYMPTOMVERSION5 | 207749 | float64 |  MedDRA dictionary version number 5 | | code | 
 | :x:| 44 | VAX_TYPE | 591241 | object | Administered Vaccine Type | | (Many, only COVID19 interested) |
 | :heavy_check_mark: | 45 | VAX_MANU | 591241 | object | Vaccine Manufacturer | important | (Many, only COVID19 interested) |
-| | 46 | VAX_LOT |  419626 | object | Manufacturer's Vaccine Lot | double check | (Many, only COVID19 interested) |
+|:heavy_check_mark: | 46 | VAX_LOT |  419626 | object | Manufacturer's Vaccine Lot | double check | (Many, only COVID19 interested) |
 | :heavy_check_mark:| 47 | VAX_DOSE_SERIES | 588217 | object | Number of doses administered | Not completely reliable, The VAERS 1 field VAX_DOSE was discontinued in the VAERS 2 | (1 --if it was noted -- , Blank) | 
-| | 48 | VAX_ROUTE |464076 | object | Vaccination Route | Could be important.. | (UN=Unknown, ID=Intradermal, IM=Intramuscular, SC=Subcutaneous, IN=Intranasal, PO=Per Oral, SYR=Needle and syringe (not specified further), JET=Needle free jet injector device,OT=Other)
-| | 49 | VAX_SITE | 476756 | object | Vaccination \[Anatomic\] Site | | nominal |
+|:heavy_check_mark: | 48 | VAX_ROUTE |464076 | object | Vaccination Route | Could be important.. | (UN=Unknown, ID=Intradermal, IM=Intramuscular, SC=Subcutaneous, IN=Intranasal, PO=Per Oral, SYR=Needle and syringe (not specified further), JET=Needle free jet injector device,OT=Other)
+|:heavy_check_mark: | 49 | VAX_SITE | 476756 | object | Vaccination \[Anatomic\] Site | | nominal |
 | :x:| 50 | VAX_NAME | 591241 | object | Vaccination Name | **REJECTED** === VAX_MANU| (Many, only COVID19 interested) | 
 
 ---
