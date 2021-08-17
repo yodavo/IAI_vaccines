@@ -51,7 +51,7 @@ About 85-90% of vaccine adverse event reports concern relatively minor events, s
 2. CHAR (object) = text or "character" data
 3. DATE (not formated) = date fields in mm/dd/yy format
 
-**Data sets merged (total 51 columns) **
+**Data sets merged (total 51 columns)**
 
 |:heavy_check_mark: |\# | Column | Count | Dtype | Description | Notes | Options |
 |--- |--- | --- | --- | --- |--- |--- | --- |
