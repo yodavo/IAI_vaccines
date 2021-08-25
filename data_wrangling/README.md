@@ -1,18 +1,6 @@
-# Data Wrangling!
-
+# Notes
+  
 ---
-
-**05/08/2021**
-
-- [x] Identificar pacientes con el mismo ID para contar dosis, identificar orden según fecha
-- [x] ~~Separar dataset de hospitalizados (Aprox. 15 000)~~ Mejor analisis, se priorizo con VAXdata
-- [x] Detectar si se mantiene la misma vacuna para ambas dosis (solo se trabajara con 1, 2 o 3 dosis)
-- [ ] Limpieza de datos
-- [ ] Definir atributos para clasificación de casos que llegan a hospitalización
-
----
- 
- ## Notes
  
  **About VAERS.**
  
