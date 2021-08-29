@@ -1,6 +1,19 @@
-# Poryecto IAI vaccines
-# Diplomado UTEC
-  
+# Proyecto IAI vaccines - Diplomado UTEC 2021
+---
+Repositorio del Proyecto IAI vaccines titulado: "Aplicación de un modelo de aprendizaje no supervisado para la identificación de perfiles en riesgo de hospitalización por efectos adversos causados por la vacuna contra el Covid-19."
+---
+## Integrantes:
+1. Nicolle Pereira
+2. David Guevera
+3. Leidy Pola
+4. Martina Guillermo
+5. Angel Ramirez
+6. Alvaro Rodríguez
+7. Paulo Vela
+8. Kathy Bolivar
+9. Eduardo Apari
+---
+# Notas sobre el dataset VAERS
 ---
  
  **About VAERS.**
